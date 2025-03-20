@@ -4,21 +4,25 @@ import 'package:google_fonts/google_fonts.dart';
 var kBallSize = 44.0;
 
 var humiditySliderTheme = ThemeData.dark().copyWith(
-  backgroundColor: BrandColors.background,
+  colorScheme: ColorScheme.dark(
+    primaryContainer: BrandColors.background,
+    primary: BrandColors.active,
+    secondary: BrandColors.secondaryText,
+  ),
   textTheme: GoogleFonts.rubikTextTheme(
     TextTheme(
-      subtitle1: TextStyle(
+      titleLarge: TextStyle(
         color: BrandColors.secondaryText,
         fontSize: 14.5,
       ),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
         color: BrandColors.mainText,
       ),
     ),
   ),
 );
 
-var currentHumidityStyle =const  TextStyle(
+var currentHumidityStyle = const TextStyle(
   fontSize: 80,
   fontWeight: FontWeight.bold,
 );
